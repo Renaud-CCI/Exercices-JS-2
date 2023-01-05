@@ -6,7 +6,16 @@
 </head>
 <body>
   <form>
-    <label for="lastname">Votre nom  : </label><input type="text" name="lastname" id="lastname" />
+    <label for="lastname">Votre nom  : </label><input type="text" name="lastname" id="lastname" onkeyup="alertBox()"/>
   </form>
+  <script>
+    
+    let alertBox = function() {
+        if (event.keyCode == 13){
+          let formValue = document.querySelector('#lastname').value;
+          alert(formValue)
+        }
+    }
+  </script>
 </body>
 </html>

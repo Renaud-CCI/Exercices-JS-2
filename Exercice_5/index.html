@@ -12,5 +12,31 @@
       <img src="images/image4.jpg" id="image4" />
       <img src="images/image5.jpg" id="image5" />
     </div>
+
+    <script>
+      let imgArray = document.querySelectorAll("img")
+      console.log(imgArray)
+      imgArray.forEach (img => {
+        img.addEventListener("mouseenter", function () {
+          console.log('ok')
+          img.src = img.src.replace('.jpg','_2.jpg')
+        })
+        img.addEventListener("mouseleave", function () {
+          console.log('ok')
+          img.src = img.src.replace('_2.jpg','.jpg')
+        })
+      })
+
+      // let imgArray = document.querySelectorAll("img")
+      // console.log(imgArray)
+      // for (let img of imgArray){
+      //   console.log (img.src.substring(33,46) + '_2' + "jpg")
+      //   img.setAttribute("onmouseover", `this.src=${img.src.substring(33,46)}_2.jpg`)
+      //   img.setAttribute("onmouseout", `this.src=${img.src.substring(33)}`)
+
+      // }
+
+
+    </script>
   </body>
 </html>
